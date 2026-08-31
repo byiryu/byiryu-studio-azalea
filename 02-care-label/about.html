@@ -1,0 +1,558 @@
+<!doctype html><html lang="ko"><head>
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About — Azalea</title><meta name="description" content="Azalea 브랜드 · 소재 · 세탁 · 사이즈 안내. 커버를 분리해 세탁할 수 있는 반려견 쿠션 · 방석 · 블랭킷."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231F4B3F'/%3E%3Crect x='8' y='11' width='16' height='10' rx='1.5' fill='none' stroke='%23F6F4EC' stroke-width='2'/%3E%3C/svg%3E"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --bg:#EEF0EC; --surf:#FFFFFF; --tape:#F6F4EC; --tint:#E3E8E2;
+ --ink:#16211C; --ink2:#4C5751; --ink3:#626C66;
+ --line:#D3D9D3; --hair:#E4E8E3; --tapeline:#E3DFD1;
+ --pine:#1F4B3F; --pine-d:#143229; --pine-t:#E7EEE9;
+ --sale:#C6431A; --sale-d:#A8340C;
+ --fs:'IBM Plex Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+ --fm:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+ --wrap:1288px; --hh:62px;
+}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 14px/1.7 var(--fs);
+ letter-spacing:-.003em;-webkit-font-smoothing:antialiased;
+ word-break:keep-all;overflow-wrap:break-word}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit;background:none;border:0}
+button,select{cursor:pointer}
+:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.015em;line-height:1.35}
+.wrap{width:min(100% - 40px,var(--wrap));margin:0 auto}
+.mono{font-family:var(--fm)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ── 혜택 고지 스트립 ─────────────────────── */
+.strip{background:var(--pine);color:#CFE0D7}
+.strip .wrap{display:flex;align-items:center;justify-content:center;gap:6px 18px;flex-wrap:wrap;
+ padding:9px 0;font:500 11px/1.5 var(--fm);letter-spacing:.07em}
+.strip b{color:#fff;font-weight:600}
+.strip span{opacity:.45}
+.strip a{border-bottom:1px solid rgba(255,255,255,.35);color:#fff}
+
+/* ── 헤더 ─────────────────────────────────── */
+.hd{position:sticky;top:0;z-index:60;background:rgba(238,240,236,.94);
+ -webkit-backdrop-filter:saturate(1.5) blur(9px);backdrop-filter:saturate(1.5) blur(9px);
+ border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:30px;height:var(--hh)}
+.logo{display:flex;align-items:baseline;gap:8px;flex:0 0 auto}
+.logo b{font:600 20px/1 var(--fs);letter-spacing:.005em}
+.logo i{font:400 9.5px/1 var(--fm);letter-spacing:.16em;color:var(--ink3);font-style:normal;
+ text-transform:uppercase;white-space:nowrap}
+.gnb{display:flex;gap:25px}
+.gnb>div,.gnb>a{position:relative}
+.gnb a{display:inline-block;font:500 14px/1 var(--fs);padding:6px 0;color:var(--ink)}
+.gnb a[aria-current]{font-weight:600;box-shadow:inset 0 -1.5px 0 var(--pine)}
+.gnb>div>a::after{content:'';display:inline-block;width:5px;height:5px;margin-left:7px;
+ border-right:1.2px solid var(--ink3);border-bottom:1.2px solid var(--ink3);
+ transform:translateY(-2px) rotate(45deg)}
+.gnb .sub{position:absolute;left:-14px;top:100%;padding:8px 0 0;opacity:0;visibility:hidden;
+ transform:translateY(-4px);transition:.2s}
+.gnb>div:hover .sub,.gnb>div:focus-within .sub{opacity:1;visibility:visible;transform:none}
+.gnb .sub{display:grid}
+.gnb .sub a{background:var(--surf);border:1px solid var(--line);border-bottom:0;
+ padding:10px 16px;font-size:13px;font-weight:400;white-space:nowrap;min-width:172px}
+.gnb .sub a:last-child{border-bottom:1px solid var(--line)}
+.gnb .sub a:hover{background:var(--pine-t);color:var(--pine)}
+.util{margin-left:auto;display:flex;align-items:center;gap:16px}
+.srch{display:flex;align-items:center;gap:8px;background:var(--surf);border:1px solid var(--line);
+ height:34px;padding:0 11px;width:212px}
+.srch svg{width:14px;height:14px;flex:0 0 auto;color:var(--ink3)}
+.srch input{width:100%;font-size:13px}
+.srch input::placeholder{color:var(--ink3)}
+.ulink{font:500 10.5px/1 var(--fm);letter-spacing:.11em;color:var(--ink2);white-space:nowrap}
+.ulink:hover{color:var(--pine)}
+.cartb{display:inline-flex;align-items:center;gap:7px}
+.cartb s{text-decoration:none;background:var(--pine);color:#fff;border-radius:9px;
+ padding:1px 6px 2px;font:600 9.5px/1.4 var(--fm)}
+.ham{display:none;margin-left:auto;width:34px;height:34px;position:relative}
+.ham i{position:absolute;left:7px;right:7px;height:1.4px;background:var(--ink)}
+.ham i:nth-child(1){top:11px}.ham i:nth-child(2){top:16.3px}.ham i:nth-child(3){top:21.6px}
+.mnav{display:none;border-top:1px solid var(--line);background:var(--surf)}
+.mnav.open{display:block}
+.mnav a{display:block;padding:13px 0;border-bottom:1px solid var(--hair);font-size:14.5px;font-weight:500}
+.mnav a.ind{padding-left:16px;font-weight:400;color:var(--ink2);font-size:13.5px}
+.mnav a:last-child{border-bottom:0}
+
+/* ── 섹션 공통 ─────────────────────────────── */
+.sec{padding:54px 0}
+.sec.t{padding:34px 0}
+.sec.tinted{background:var(--tint)}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 20px;
+ flex-wrap:wrap;margin:0 0 16px;padding-bottom:11px;border-bottom:1px solid var(--line)}
+.eb{font:500 10.5px/1 var(--fm);letter-spacing:.19em;text-transform:uppercase;color:var(--pine);
+ margin:0 0 7px}
+.shead h2{font-size:21px}
+.shead .rt{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;
+ font:500 11px/1 var(--fm);letter-spacing:.09em;color:var(--ink3)}
+.shead .rt a{color:var(--ink2);border-bottom:1px solid var(--line);padding-bottom:2px}
+.shead .rt a:hover{color:var(--pine);border-color:var(--pine)}
+.sec.tinted .shead .rt{color:var(--ink2)}
+.mod{background:var(--surf);border:1px solid var(--hair);padding:16px 17px 15px}
+.mod>h3{font:500 10.5px/1 var(--fm);letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);
+ margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--hair);
+ display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.mod>h3 s{text-decoration:none;color:var(--pine);letter-spacing:.09em}
+.lk{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 var(--fs);color:var(--pine);
+ border-bottom:1px solid rgba(31,75,63,.35);padding-bottom:3px}
+.lk:hover{border-color:var(--pine)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 20px;
+ font:600 14px/1 var(--fs);border:1px solid var(--pine);transition:.16s}
+.btn.pri{background:var(--pine);color:#fff}
+.btn.pri:hover{background:var(--pine-d);border-color:var(--pine-d)}
+.btn.sec{background:var(--surf);color:var(--pine)}
+.btn.sec:hover{background:var(--pine-t)}
+.btn.sm{height:38px;padding:0 15px;font-size:13px}
+.btn[aria-disabled=true]{background:var(--tint);border-color:var(--line);color:var(--ink3);cursor:not-allowed}
+
+/* ── 스토어프론트 모듈 (히어로) ─────────────── */
+.front{display:grid;grid-template-columns:1.62fr 1fr;gap:12px;padding:14px 0 0}
+.promo{position:relative;overflow:hidden;background:var(--tint);border:1px solid var(--hair);
+ min-height:472px;display:flex;align-items:flex-end}
+.promo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pbox{position:relative;margin:18px;max-width:404px;background:rgba(255,255,255,.955);
+ border-left:3px solid var(--pine);padding:19px 21px 19px}
+.pbox .eb{margin-bottom:9px}
+.pbox h1{font-size:25px;line-height:1.4}
+.pbox p{margin:9px 0 15px;font-size:13.5px;line-height:1.75;color:var(--ink2)}
+.side{display:grid;grid-template-rows:auto 1fr;gap:12px;min-width:0}
+.brow{display:grid;grid-template-columns:22px 1fr auto;gap:11px;align-items:center;
+ padding:7px 0;font-size:12.5px;border-bottom:1px dotted var(--hair)}
+.brow:last-child{border-bottom:0}
+.brow svg{width:20px;height:20px;color:var(--pine)}
+.brow em{font-style:normal;font:500 11.5px/1 var(--fm);letter-spacing:.02em;color:var(--ink);
+ white-space:nowrap;font-variant-numeric:tabular-nums}
+.trow{display:grid;grid-template-columns:19px 52px 1fr auto;gap:11px;align-items:center;
+ padding:9px 0;border-bottom:1px solid var(--hair)}
+.trow:last-child{border-bottom:0}
+.trow .rk{font:600 12px/1 var(--fm);color:var(--pine);letter-spacing:.02em}
+.trow img{width:52px;height:52px;object-fit:cover;background:var(--tint)}
+.trow .nm{font:500 13px/1.4 var(--fs);display:block}
+.trow .st{font:500 10.5px/1.5 var(--fm);color:var(--ink3);letter-spacing:.04em}
+.trow .pr{font:600 13px/1 var(--fm);letter-spacing:-.01em;white-space:nowrap;
+ font-variant-numeric:tabular-nums}
+.trow:hover .nm{color:var(--pine)}
+
+/* ── 브랜드 라인 밴드 ─────────────────────── */
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 26px;
+ flex-wrap:wrap;padding:22px 0}
+.band .eb{margin:0 0 4px}
+.band p{font-size:14.5px;line-height:1.7;max-width:78ch}
+
+/* ── 카테고리 스트립 ──────────────────────── */
+.cats{display:grid;gap:8px}
+.cat{display:grid;grid-template-columns:92px minmax(0,1fr) auto 66px;
+ gap:24px;align-items:center;background:var(--surf);border:1px solid var(--hair);
+ padding:11px 15px 11px 11px;transition:.16s}
+.cat:hover{border-color:var(--pine)}
+.cat>img{width:92px;height:92px;object-fit:cover;background:var(--tint)}
+.cat .nm{font:600 16.5px/1.4 var(--fs)}
+.cat .de{font-size:12.5px;line-height:1.65;color:var(--ink2);margin-top:2px}
+.cat dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;
+ font:500 11px/1.5 var(--fm);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.cat dt{color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-size:9.5px;
+ align-self:center}
+.cat dd{color:var(--ink);white-space:nowrap}
+.cat .go{font:500 10.5px/1 var(--fm);letter-spacing:.11em;color:var(--ink3);text-align:right}
+.cat:hover .go{color:var(--pine)}
+
+/* ── 상품 그리드 · 카드 ───────────────────── */
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pg.c3{grid-template-columns:repeat(3,1fr)}
+.pc{display:flex;flex-direction:column;background:var(--surf);border:1px solid var(--hair);
+ transition:border-color .16s}
+.pc:hover{border-color:var(--pine)}
+.ph{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--tint)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.pc:hover .ph img{transform:scale(1.035)}
+.bdgs{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:flex-start}
+.bdg{font:600 9.5px/1 var(--fm);letter-spacing:.11em;padding:5px 7px 5px;color:#fff;
+ background:var(--pine);text-transform:uppercase}
+.bdg.sale{background:var(--sale-d)}
+.bdg.best{background:var(--ink)}
+.bdg.out{background:#66716B}
+.pb{flex:1;display:flex;flex-direction:column;gap:5px;padding:11px 12px 12px}
+.pc .nm{font:500 13.5px/1.5 var(--fs)}
+.pc .sp{font:400 11px/1.5 var(--fm);letter-spacing:.01em;color:var(--ink3)}
+.rate{display:flex;align-items:center;gap:5px;font:500 11px/1 var(--fm);color:var(--ink2);
+ letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.rate b{color:var(--pine);font-weight:600}
+.rate s{text-decoration:none;color:var(--ink3)}
+.prc{margin-top:auto;padding-top:3px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;
+ font-variant-numeric:tabular-nums}
+.prc .was{font:400 11.5px/1 var(--fm);color:var(--ink3);text-decoration:line-through}
+.prc .now{font:600 16px/1.2 var(--fm);letter-spacing:-.015em}
+.prc .off{font:600 12.5px/1 var(--fm);color:var(--sale)}
+.pc.sold .ph img{opacity:.42;filter:grayscale(.45)}
+.pc.sold .now{color:var(--ink3)}
+.pc.sold:hover .ph img{transform:none}
+
+/* ── 카테고리 탭 · 컨트롤 바 ───────────────── */
+.ctabs{display:flex;gap:6px;flex-wrap:wrap}
+.ctab{display:inline-flex;align-items:center;gap:8px;height:37px;padding:0 15px;
+ background:var(--surf);border:1px solid var(--line);font:500 13px/1 var(--fs);transition:.14s}
+.ctab s{text-decoration:none;font:500 10.5px/1 var(--fm);color:var(--ink3);letter-spacing:.04em}
+.ctab:hover{border-color:var(--pine);color:var(--pine)}
+.ctab.on{background:var(--pine);border-color:var(--pine);color:#fff}
+.ctab.on s{color:rgba(255,255,255,.72)}
+.ctrl{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+ margin:14px 0 16px;padding:11px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ctrl .n{font:500 11.5px/1 var(--fm);letter-spacing:.06em;color:var(--ink2);
+ font-variant-numeric:tabular-nums}
+.ctrl .n b{color:var(--ink);font-weight:600}
+.sel{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+ background:var(--surf);height:34px;padding:0 11px;font-size:12.5px}
+.sel select{padding-right:2px}
+.crumb{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:16px 0 0;
+ font:400 11px/1.6 var(--fm);letter-spacing:.06em;color:var(--ink3)}
+.crumb a:hover{color:var(--pine)}
+.crumb em{font-style:normal;color:var(--ink2)}
+.ptitle{padding:8px 0 0}
+.ptitle h1{font-size:27px}
+.ptitle p{margin-top:7px;font-size:13.5px;color:var(--ink2)}
+
+/* ── 리뷰 ─────────────────────────────────── */
+.rvwrap{display:grid;grid-template-columns:292px 1fr;gap:12px;align-items:start}
+.score .big{display:flex;align-items:baseline;gap:9px}
+.score .big b{font:600 42px/1 var(--fm);letter-spacing:-.03em}
+.score .big i{font-style:normal;font:500 12px/1 var(--fm);color:var(--ink3);letter-spacing:.05em}
+.score .stars{color:var(--pine);letter-spacing:.14em;font-size:14px;margin:9px 0 3px}
+.score .tot{font:500 11px/1 var(--fm);letter-spacing:.05em;color:var(--ink3)}
+.bars{display:grid;gap:6px;margin-top:15px;padding-top:14px;border-top:1px solid var(--hair)}
+.bar{display:grid;grid-template-columns:22px 1fr 34px;gap:9px;align-items:center;
+ font:500 10.5px/1 var(--fm);color:var(--ink3);font-variant-numeric:tabular-nums}
+.bar i{display:block;height:6px;background:var(--tint);position:relative}
+.bar i s{position:absolute;inset:0 auto 0 0;background:var(--pine);text-decoration:none}
+.bar u{text-decoration:none;text-align:right}
+.rvs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rv{display:flex;flex-direction:column;gap:9px;background:var(--surf);border:1px solid var(--hair);
+ padding:15px 16px 14px}
+.rv .top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.rv .st{color:var(--pine);letter-spacing:.1em;font-size:12.5px}
+.rv .dt{font:400 10.5px/1 var(--fm);color:var(--ink3);letter-spacing:.04em}
+.rv .bd{font-size:13px;line-height:1.75;color:var(--ink)}
+.rv .who{display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:11px;
+ border-top:1px solid var(--hair)}
+.rv .who img{width:30px;height:30px;object-fit:cover;border-radius:50%;background:var(--tint)}
+.rv .who b{display:block;font:500 12px/1.4 var(--fs)}
+.rv .who span{display:block;font:400 10.5px/1.4 var(--fm);color:var(--ink3);letter-spacing:.03em}
+
+/* ── 안내 4열 ─────────────────────────────── */
+.i4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.i4 .mod{display:flex;flex-direction:column;gap:8px;padding:18px 18px 17px}
+.i4 svg{width:22px;height:22px;color:var(--pine)}
+.i4 h3{font-size:14.5px}
+.i4 p{font-size:12.5px;line-height:1.8;color:var(--ink2)}
+.i4 .lk{margin-top:auto}
+
+/* ── 케어 라벨 블록 (시그니처) ─────────────── */
+.care{background:var(--tape);border:1px solid var(--tapeline)}
+.care-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;
+ padding:14px 20px;border-bottom:1px dashed #C9C3B0}
+.care-h b{font:600 11px/1 var(--fm);letter-spacing:.2em;text-transform:uppercase;color:#4A5A4E}
+.care-h span{font:500 10.5px/1 var(--fm);letter-spacing:.09em;color:#6B6450}
+.care-bd{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:20px}
+.syms{display:flex;gap:8px;flex-wrap:wrap;max-width:296px}
+.sym{width:48px;text-align:center;font:400 8.5px/1.35 var(--fm);color:#585240;letter-spacing:.01em}
+.sym svg{width:34px;height:34px;margin:0 auto 6px;display:block;color:#3E4A40}
+.care dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;
+ font:400 12px/1.6 var(--fm);letter-spacing:.01em;align-content:start}
+.care dt{font-weight:500;color:#6B6450;text-transform:uppercase;letter-spacing:.11em;font-size:9.5px;
+ padding-top:3px}
+.care dd{color:#334036}
+
+/* ── 표 ───────────────────────────────────── */
+.tbw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tb{width:100%;border-collapse:collapse;background:var(--surf);font-size:12.5px;min-width:520px}
+.tb th,.tb td{border:1px solid var(--hair);padding:10px 13px;text-align:left;vertical-align:top;
+ line-height:1.65}
+.tb thead th{background:var(--tint);font:600 10.5px/1.4 var(--fm);letter-spacing:.11em;
+ text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+.tb tbody th{background:var(--tape);font:500 11px/1.5 var(--fm);letter-spacing:.05em;
+ color:#4E5647;width:118px;white-space:nowrap}
+.tb td.num{font:500 12.5px/1.65 var(--fm);font-variant-numeric:tabular-nums}
+.tb td .pr{font:600 13px/1 var(--fm);font-variant-numeric:tabular-nums}
+.tb td .off{font:600 11px/1 var(--fm);color:var(--sale);margin-left:5px}
+.tb .hi{color:var(--pine);font-weight:600}
+.tb .nw{white-space:nowrap}
+
+/* ── 상품 상세 ────────────────────────────── */
+.pv{display:grid;grid-template-columns:minmax(0,1fr) 452px;gap:34px;padding:20px 0 0}
+.gal .main{aspect-ratio:1/1;background:var(--tint);overflow:hidden;border:1px solid var(--hair)}
+.gal .main img{width:100%;height:100%;object-fit:cover}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.thumbs a{display:block;aspect-ratio:1/1;border:1px solid var(--hair);background:var(--tint);
+ overflow:hidden}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs a:first-child{border-color:var(--pine)}
+.buy{position:sticky;top:calc(var(--hh) + 18px);align-self:start}
+.buy .code{display:flex;align-items:center;gap:9px;font:500 10.5px/1 var(--fm);letter-spacing:.13em;
+ color:var(--ink3)}
+.buy .code .bdg{position:static;letter-spacing:.1em}
+.buy h1{font-size:25px;margin:11px 0 9px}
+.buy .rate{font-size:11.5px}
+.buy .rate a{border-bottom:1px solid var(--line);padding-bottom:2px}
+.pblk{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:15px 0;
+ padding:15px 0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+ font-variant-numeric:tabular-nums}
+.pblk .was{font:400 13px/1 var(--fm);color:var(--ink3);text-decoration:line-through}
+.pblk .now{font:600 28px/1 var(--fm);letter-spacing:-.03em}
+.pblk .off{font:600 15px/1 var(--fm);color:var(--sale)}
+.lead3{display:grid;gap:5px;font-size:13.5px;line-height:1.8;color:var(--ink2)}
+.ben{background:var(--tape);border:1px solid var(--tapeline);padding:13px 15px;margin:16px 0;
+ display:grid;gap:7px}
+.ben div{display:grid;grid-template-columns:74px 1fr;gap:12px;font-size:12.5px;line-height:1.6}
+.ben dt,.ben b{font:500 10px/1.7 var(--fm);letter-spacing:.11em;text-transform:uppercase;
+ color:#6B6450;font-weight:500}
+.ben em{font-style:normal;font-family:var(--fm);font-weight:500;font-variant-numeric:tabular-nums}
+.opt{display:grid;gap:9px;margin:16px 0 0}
+.opt label{font:500 10.5px/1 var(--fm);letter-spacing:.13em;text-transform:uppercase;color:var(--ink3)}
+.opt select{width:100%;height:44px;border:1px solid var(--line);background:var(--surf);padding:0 13px;
+ font-size:13.5px}
+.qtyrow{display:flex;align-items:center;justify-content:space-between;gap:12px;
+ border:1px solid var(--line);background:var(--surf);padding:9px 12px}
+.qtyrow .nm{font-size:13px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:32px;height:32px;font:500 15px/1 var(--fm);color:var(--ink2)}
+.qty button:hover{color:var(--pine)}
+.qty span{width:38px;text-align:center;font:500 13px/1 var(--fm);font-variant-numeric:tabular-nums}
+.total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+ border-top:1px solid var(--line);margin-top:16px;padding:15px 0 17px}
+.total i{font-style:normal;font:500 10.5px/1 var(--fm);letter-spacing:.14em;color:var(--ink3);
+ text-transform:uppercase}
+.total b{font:600 27px/1 var(--fm);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.total b s{text-decoration:none;font-size:15px;font-weight:500;margin-left:3px}
+.acts{display:grid;gap:8px}
+.acts .r1{display:grid;grid-template-columns:1fr 52px;gap:8px}
+.acts .wish{border:1px solid var(--line);background:var(--surf);display:inline-flex;
+ align-items:center;justify-content:center;height:46px}
+.acts .wish svg{width:19px;height:19px;color:var(--ink2)}
+.acts .wish:hover{border-color:var(--pine)}
+.acts .wish:hover svg{color:var(--pine)}
+.acts .btn{width:100%;height:52px;font-size:15px}
+.ship{margin-top:16px;display:grid;gap:6px;font:400 11.5px/1.7 var(--fm);color:var(--ink2);
+ letter-spacing:.01em}
+.ship div{display:grid;grid-template-columns:66px 1fr;gap:11px}
+.ship dt,.ship b{color:var(--ink3);font-weight:500;text-transform:uppercase;letter-spacing:.1em;
+ font-size:9.5px;line-height:2}
+.tabnav{display:flex;background:var(--surf);border:1px solid var(--hair);border-bottom:0;
+ margin-top:44px}
+.tabnav button{flex:1;padding:15px 6px;font:500 13.5px/1 var(--fs);color:var(--ink3);
+ border-bottom:2px solid transparent}
+.tabnav button.on{color:var(--ink);font-weight:600;border-bottom-color:var(--pine)}
+.tabnav button s{text-decoration:none;font:500 10.5px/1 var(--fm);color:var(--ink3);margin-left:6px}
+.tabbd{background:var(--surf);border:1px solid var(--hair);border-top:1px solid var(--line);
+ padding:30px}
+.tabbd>.lead{font-size:15px;line-height:1.85;max-width:66ch;margin:0 0 26px}
+.dimgs{display:grid;gap:0;max-width:900px;margin:26px auto 0}
+.dimgs img{width:100%}
+.mbar{display:none}
+
+/* ── 허브 (의뢰인 진입점) ─────────────────── */
+.hero-hub{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.hero-hub .eb{margin-bottom:12px}
+.hero-hub h1{font-size:clamp(28px,3.6vw,40px);line-height:1.3;max-width:22ch}
+.hero-hub p{margin-top:16px;font-size:15.5px;line-height:1.85;color:var(--ink2);max-width:60ch}
+.hubgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:34px 0 0}
+.hubcard{background:var(--surf);border:1px solid var(--hair);display:grid;
+ grid-template-columns:150px 1fr;transition:.16s}
+.hubcard:hover{border-color:var(--pine)}
+.hubcard img{width:150px;height:100%;min-height:132px;object-fit:cover;background:var(--tint)}
+.hubcard .bd{padding:18px 20px}
+.hubcard h3{font-size:17px}
+.hubcard .eb{margin:0 0 8px}
+.hubcard p{margin-top:7px;font-size:12.5px;line-height:1.75;color:var(--ink2)}
+.hubcard .go{margin-top:11px;display:inline-block;font:500 10.5px/1 var(--fm);letter-spacing:.12em;
+ color:var(--pine)}
+.tokens{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 0 0}
+.swrow{display:flex;gap:8px;flex-wrap:wrap}
+.sw{flex:1 1 62px;min-width:62px}
+.sw i{display:block;height:52px;border:1px solid rgba(0,0,0,.07)}
+.sw b{display:block;margin-top:7px;font:500 9.5px/1.5 var(--fm);letter-spacing:.05em;color:var(--ink2)}
+.sw s{display:block;text-decoration:none;font:400 9px/1.4 var(--fm);color:var(--ink3)}
+.tsample{display:grid;gap:11px}
+.tsample p{margin:0}
+.ts1{font:600 22px/1.3 var(--fs);letter-spacing:-.02em}
+.ts2{font:400 13.5px/1.75 var(--fs);color:var(--ink2)}
+.ts3{font:600 17px/1 var(--fm);font-variant-numeric:tabular-nums}
+.ts3 s{text-decoration:line-through;font-size:12px;font-weight:400;color:var(--ink3);margin-right:7px}
+.ts3 u{text-decoration:none;font-size:13px;color:var(--sale);margin-left:7px}
+
+/* ── 푸터 ─────────────────────────────────── */
+.ft{background:var(--ink);color:#B7C2BC;margin-top:0}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;padding:44px 0 36px}
+.ft-brand b{display:block;font:600 19px/1 var(--fs);color:#fff;letter-spacing:.005em}
+.ft-brand i{display:block;font:400 9.5px/1 var(--fm);letter-spacing:.16em;color:#8A9891;
+ margin-top:8px;font-style:normal;text-transform:uppercase}
+.ft-brand p{margin-top:15px;font-size:12.5px;line-height:1.85;color:#A8B4AE;max-width:36ch}
+.ft h4{font:500 10.5px/1 var(--fm);letter-spacing:.17em;text-transform:uppercase;color:#8A9891;
+ margin:0 0 13px}
+.ft-top a{display:block;padding:4px 0;font-size:12.5px;color:#C3CEC8}
+.ft-top a:hover{color:#fff}
+.ft-legal{border-top:1px solid #2A362F;padding:20px 0 42px;display:grid;gap:11px}
+.lg-nav{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:12px}
+.lg-nav a{color:#C3CEC8}
+.lg-nav a:hover{color:#fff}
+.lg-nav b{color:#fff}
+.biz{display:flex;gap:3px 18px;flex-wrap:wrap;font:400 10.5px/1.9 var(--fm);color:#8A9891;
+ letter-spacing:.02em}
+.cp{font:500 9.5px/1 var(--fm);letter-spacing:.15em;color:#7E8C85;padding-top:5px}
+
+/* ── annotate layer (?annotate=1 only) ────── */
+.an,.abar{display:none}
+.annot .an{display:block;text-align:left;margin:10px 0 0;padding:9px 12px;background:#111a16;
+ color:#d6e2da;font:11px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.01em;
+ border-left:2px solid var(--sale)}
+.annot .an b{color:#fff}
+.annot .an code{color:#9fd8bf}
+.annot .abar{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;padding:8px 16px;
+ background:#111a16;color:#a8bab0;font:11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;
+ letter-spacing:.04em;position:sticky;top:0;z-index:90}
+.annot .abar a{color:#a8bab0;border-bottom:1px solid #33463d;padding-bottom:1px}
+.annot .abar a:hover,.annot .abar a.cur{color:#fff;border-color:#fff}
+.annot .abar .r{margin-left:auto;display:flex;gap:10px}
+.annot .abar button{border:1px solid #33463d;padding:4px 9px;color:#a8bab0}
+.annot .abar button:hover{color:#fff;border-color:#fff}
+.annot .hd{top:31px}
+.annot .buy{top:calc(var(--hh) + 49px)}
+
+/* ── 반응형 ───────────────────────────────── */
+@media (max-width:1180px){
+ .front{grid-template-columns:1fr}
+ .promo{min-height:0;aspect-ratio:16/9}
+ .side{grid-template-rows:auto auto}
+ .pg{grid-template-columns:repeat(3,1fr)}
+ .pv{grid-template-columns:1fr;gap:26px}
+ .buy{position:static}
+ .rvwrap{grid-template-columns:1fr}
+ .i4{grid-template-columns:repeat(2,1fr)}
+ .cat{grid-template-columns:84px minmax(0,1fr) auto 52px;gap:18px}
+ .cat>img{width:84px;height:84px}
+ .srch{width:172px}
+ .gnb{gap:20px}.hd-in{gap:22px}
+ .ft-top{grid-template-columns:1fr 1fr 1fr;gap:26px}
+ .ft-brand{grid-column:1 / -1}
+ .hubgrid{grid-template-columns:1fr}
+}
+@media (max-width:880px){
+ :root{--hh:56px}
+ .gnb,.util{display:none}
+ .ham{display:block}
+ .sec{padding:38px 0}
+ .sec.t{padding:26px 0}
+ .promo{aspect-ratio:4/3}
+ .pbox{margin:12px;max-width:none;padding:16px 17px}
+ .pbox h1{font-size:20px}
+ .pg{grid-template-columns:repeat(2,1fr);gap:8px}
+ .pg.c3{grid-template-columns:repeat(2,1fr)}
+ .pc .sp{display:none}
+ .cat{grid-template-columns:74px 1fr;gap:14px;row-gap:9px;padding:11px}
+ .cat>img{width:74px;height:74px}
+ .cat dl{grid-column:1 / -1;grid-template-columns:auto 1fr auto 1fr}
+ .cat .go{display:none}
+ .rvs{grid-template-columns:1fr}
+ .tabbd{padding:22px 16px}
+ .tabnav button{font-size:12.5px;padding:14px 4px}
+ .care-bd{grid-template-columns:1fr;gap:20px}
+ .syms{max-width:none}
+ .band .wrap{padding:18px 0}
+ .thumbs{grid-template-columns:repeat(4,1fr)}
+ .total{padding-bottom:14px}
+ .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;gap:9px;align-items:center;
+  background:rgba(255,255,255,.975);border-top:1px solid var(--line);padding:9px 14px 10px;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .mbar .p{flex:0 0 auto;font:600 16px/1.2 var(--fm);letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums}
+ .mbar .p s{display:block;text-decoration:none;font:500 9.5px/1 var(--fm);color:var(--ink3);
+  letter-spacing:.1em;margin-bottom:3px}
+ .mbar .btn{flex:1;height:46px;padding:0 12px;font-size:14px}
+ .mbar .btn.sec{flex:0 0 96px}
+ body.hasbar{padding-bottom:74px}
+ .ft-top{grid-template-columns:1fr 1fr;gap:24px}
+ .hubcard{grid-template-columns:112px 1fr}
+ .hubcard img{width:112px}
+ .tokens{grid-template-columns:1fr}
+ .hero-hub{padding:40px 0 30px}
+}
+@media (max-width:520px){
+ .wrap{width:min(100% - 28px,var(--wrap))}
+ .strip .wrap{font-size:10px;gap:4px 12px}
+ .i4{grid-template-columns:1fr}
+ .ft-top{grid-template-columns:1fr}
+ .ptitle h1{font-size:22px}
+ .pblk .now{font-size:24px}
+ .tb{min-width:460px}
+}
+@media (prefers-reduced-motion:reduce){
+ *{transition:none!important;animation:none!important}
+}
+@media print{.abar{display:none!important}}
+</style><script>
+(function(){
+ var q=new URLSearchParams(location.search);
+ if(q.get('annotate')==='1'){
+   document.documentElement.classList.add('annot');
+   window.addEventListener('DOMContentLoaded',function(){
+     document.querySelectorAll('a[href]').forEach(function(a){
+       var h=a.getAttribute('href');
+       if(!h||/^(https?:|mailto:|tel:|#)/.test(h)||h.indexOf('annotate=1')>-1)return;
+       a.setAttribute('href',h+(h.indexOf('?')>-1?'&':'?')+'annotate=1');
+     });
+     var mb=document.getElementById('mwv');
+     if(mb)mb.addEventListener('click',function(){window.open(location.href,'azmob','width=430,height=920');});
+   });
+ }
+ window.addEventListener('DOMContentLoaded',function(){
+   var h=document.getElementById('ham'),n=document.getElementById('mnav');
+   if(h&&n)h.addEventListener('click',function(){n.classList.toggle('open');});
+   var tabs=document.querySelectorAll('.ctab[data-view]');
+   if(tabs.length){
+     var apply=function(v){
+       tabs.forEach(function(t){t.classList.toggle('on',t.dataset.view===v);});
+       document.querySelectorAll('[data-view-panel]').forEach(function(p){
+         p.hidden=(p.dataset.viewPanel!==v);
+       });
+       document.querySelectorAll('.pc[data-cat]').forEach(function(c){
+         c.hidden=(v!=='all'&&c.dataset.cat.indexOf(v)<0);
+       });
+       var n=document.getElementById('vcount');
+       if(n){var m={all:12,bed:7,mat:5,cool:3};n.textContent=m[v];}
+       var tt=document.getElementById('vtitle'),td=document.getElementById('vdesc'),
+           tc=document.getElementById('vcrumb');
+       var M={all:['전체 상품','쿠션 · 방석 · 블랭킷 · 쿨링 매트 12종을 한 화면에서 비교하세요.','전체 상품'],
+              bed:['Bed &amp; Cushion','오래 머무는 자리. 커버를 분리해 세탁할 수 있는 쿠션과 방석 7종.','Bed &amp; Cushion'],
+              mat:['Blanket &amp; Mat','덮고 깔는 것. 와플 블랭킷과 러그형 매트 5종.','Blanket &amp; Mat'],
+              cool:['Cooling','여름 한정 냉감 라인 3종. 소재와 두께로 비교하고 고르세요.','Cooling']};
+       if(tt){tt.innerHTML=M[v][0];}if(td){td.textContent=M[v][1];}if(tc){tc.innerHTML=M[v][2];}
+     };
+     tabs.forEach(function(t){t.addEventListener('click',function(e){
+       e.preventDefault();apply(t.dataset.view);
+       history.replaceState(null,'','#'+t.dataset.view);
+     });});
+     var h0=(location.hash||'#all').slice(1);
+     apply(['all','bed','mat','cool'].indexOf(h0)>-1?h0:'all');
+   }
+   var tn=document.querySelectorAll('.tabnav button[data-tab]');
+   if(tn.length){
+     tn.forEach(function(b){b.addEventListener('click',function(){
+       tn.forEach(function(x){x.classList.toggle('on',x===b);});
+       document.querySelectorAll('[data-tabpanel]').forEach(function(p){
+         p.hidden=(p.dataset.tabpanel!==b.dataset.tab);
+       });
+     });});
+   }
+   document.querySelectorAll('.qty').forEach(function(g){
+     var s=g.querySelector('span');
+     g.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
+       var v=parseInt(s.textContent,10)+(b.dataset.d==='+'?1:-1);
+       if(v<1)v=1;s.textContent=v;
+     });});
+   });
+ });
+})();
+</script></head><body><div class="strip"><div class="wrap"><b>50,000원 이상 무료배송</b><span aria-hidden="true">/</span>평일 15시 이전 결제 시 당일 출고<span aria-hidden="true">/</span><a href="#notice-shipping">교환 · 환불 안내</a></div></div><header class="hd"><div class="wrap hd-in"><a class="logo" href="main.html"><b>AZALEA</b><i>Dog bedding</i></a><nav class="gnb" aria-label="주메뉴"><div><a href="product-list.html">Shop</a><div class="sub"><a href="product-list.html#bed">Bed &amp; Cushion</a><a href="product-list.html#mat">Blanket &amp; Mat</a><a href="product-list.html#cool">Cooling</a></div></div><a href="about.html" aria-current="page">About</a><a href="#notice">Notice</a></nav><div class="util"><form class="srch" action="#search" role="search"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8.6" cy="8.6" r="5.4"/><path d="M12.6 12.6 17 17"/></svg><input type="search" placeholder="상품 검색" aria-label="상품 검색"></form><a class="ulink" href="#login">LOGIN</a><a class="ulink cartb" href="#cart">CART <s>0</s></a></div><button class="ham" id="ham" aria-label="메뉴 열기"><i></i><i></i><i></i></button></div><nav class="mnav" id="mnav" aria-label="모바일 메뉴"><div class="wrap"><a href="product-list.html">Shop</a><a class="ind" href="product-list.html#bed">Bed &amp; Cushion</a><a class="ind" href="product-list.html#mat">Blanket &amp; Mat</a><a class="ind" href="product-list.html#cool">Cooling</a><a href="about.html">About</a><a href="#notice">Notice</a><a href="#search">상품 검색</a><a href="#login">Login</a><a href="#cart">Cart (0)</a></div></nav></header><main><div class="wrap"><nav class="crumb" aria-label="현재 위치"><a href="main.html">Home</a><span>/</span><em>About</em></nav><div class="ptitle"><h1>About Azalea</h1><p>브랜드 · 소재 · 세탁 · 사이즈 — 주문 전에 확인해야 할 것부터 적었습니다.</p></div></div><section class="sec t"><div class="wrap"><div style="position:relative;border:1px solid var(--hair);overflow:hidden;background:var(--tint)"><img src="https://placedog.net/1400/700?id=47" alt="Azalea 대표 이미지" width="1400" height="700" style="width:100%;aspect-ratio:2/1;object-fit:cover"><div style="position:absolute;left:0;right:0;bottom:0;background:rgba(22,33,28,.86);color:#CFDAD3;padding:11px 18px;display:flex;gap:8px 20px;flex-wrap:wrap;font:500 10.5px/1.6 var(--fm);letter-spacing:.11em;text-transform:uppercase"><span>Azalea / Seoul</span><span style="opacity:.4">/</span><span>Dog bedding since 2026</span><span style="opacity:.4">/</span><span>12 products · 3 categories</span></div></div></div></section><section class="sec"><div class="wrap"><div class="shead"><div><p class="eb">Brand sheet</p><h2>브랜드 스펙</h2></div><div class="rt"><span>BRAND / MATERIAL / CARE / SIZE</span></div></div><div style="display:grid;grid-template-columns:148px minmax(0,1fr);gap:30px;padding:26px 0;border-top:1px solid var(--line)"><div><p class="eb" style="margin:0 0 6px">Brand</p><p style="font:600 15px/1.4 var(--fs)">무엇을 만드나</p></div><div><p style="font-size:14.5px;line-height:1.9;max-width:64ch">아잘레아는 반려견이 하루의 대부분을 보내는 자리를 만듭니다. 열두 가지 쿠션과 방석, 블랭킷이 전부입니다. 품목을 늘리는 대신 하나를 오래 쓰게 만드는 쪽을 골랐습니다.</p><p style="font-size:14.5px;line-height:1.9;max-width:64ch;margin-top:16px">기준은 세 가지입니다. 커버를 분리해 집에서 세탁할 수 있어야 하고, 거실에 두었을 때 집의 색을 해치지 않아야 하고, 우리 아이 체중에 맞는 사이즈가 있어야 합니다. 이 세 가지를 통과하지 못한 시제품은 상품이 되지 못했습니다.</p><p style="font-size:14.5px;line-height:1.9;max-width:64ch;margin-top:16px">그래서 상품 페이지마다 소재 구성과 세탁 방법, 사이즈 실측값을 먼저 적습니다. 사진보다 먼저 확인해야 하는 것이 그쪽이라고 생각합니다.</p></div></div><div style="display:grid;grid-template-columns:148px minmax(0,1fr);gap:30px;padding:26px 0;border-top:1px solid var(--line)"><div><p class="eb" style="margin:0 0 6px">Material</p><p style="font:600 15px/1.4 var(--fs)">무엇으로 만드나</p></div><div><p style="font-size:14px;line-height:1.9;max-width:64ch">겉감은 면 100% 또는 면 혼방을 씁니다. 충전재는 폴리에스터 볼 충전재이고, 쿨링 라인만 냉감 젤 또는 냉감 가공 원단을 함께 씁니다. 모든 겉커버는 지퍼로 분리됩니다.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px"><img src="https://placedog.net/800/1000?id=26" alt="소재 이미지" width="800" height="1000" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--hair)"><img src="https://placedog.net/800/1000?id=199" alt="제작 이미지" width="800" height="1000" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--hair)"></div></div></div><div style="display:grid;grid-template-columns:148px minmax(0,1fr);gap:30px;padding:26px 0;border-top:1px solid var(--line)"><div><p class="eb" style="margin:0 0 6px">Care</p><p style="font:600 15px/1.4 var(--fs)">어떻게 빨나</p></div><div><p style="font-size:14px;line-height:1.9;max-width:64ch;margin-bottom:18px">30°C 이하 물세탁, 표백 금지, 건조기 사용 금지. 커버는 세탁망에 넣어 단독 세탁을 권합니다. 상품마다 같은 항목 · 같은 순서로 상세 페이지에 적어 두었습니다.</p><div class="care"><div class="care-h"><b>AZALEA CARE LABEL</b><span>ALL PRODUCTS</span></div><div class="care-bd"><div class="syms"><div class="sym"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 13.5h31l-3 17.5a3 3 0 0 1-3 2.5H10.5a3 3 0 0 1-3-2.5z"/><text x="20" y="28.5" text-anchor="middle" font-size="11" font-family="monospace" font-weight="600" fill="currentColor" stroke="none">30</text></svg>30°C 물세탁</div><div class="sym"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6.5 34 32H6z"/><path d="M9.5 9.5 30.5 30.5M30.5 9.5 9.5 30.5"/></svg>표백 금지</div><div class="sym"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="8.5" width="28" height="25" rx="1.5"/><circle cx="20" cy="21" r="8.6"/><path d="M8 10.5 32 31.5M32 10.5 8 31.5"/></svg>건조기 금지</div><div class="sym"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 28.5h27l-3-9.5c-7-4.2-14-4.2-21 0z"/><circle cx="20" cy="24.5" r="1.5" fill="currentColor"/></svg>낮은 온도 다림질</div><div class="sym"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="13.2"/><path d="M10.6 10.6 29.4 29.4M29.4 10.6 10.6 29.4"/></svg>드라이클리닝 금지</div></div><dl><dt>세탁</dt><dd>30°C 이하 물세탁 · 커버 분리</dd><dt>표백</dt><dd>사용 금지</dd><dt>건조</dt><dd>그늘에 펴서 자연 건조 · 건조기 금지</dd><dt>다림질</dt><dd>낮은 온도 · 겉감만</dd><dt>주의</dt><dd>충전재는 세탁하지 않습니다</dd></dl></div></div></div></div><div id="size"></div><div style="display:grid;grid-template-columns:148px minmax(0,1fr);gap:30px;padding:26px 0;border-top:1px solid var(--line)"><div><p class="eb" style="margin:0 0 6px">Size</p><p style="font:600 15px/1.4 var(--fs)">어떤 사이즈가 있나</p></div><div><p style="font-size:14px;line-height:1.9;max-width:64ch;margin-bottom:18px">S · M · L 세 가지입니다. 체중 기준으로 골라 주세요. 상세 페이지에는 상품별 실측값(가로 × 세로 × 높이)이 있습니다.</p><div class="tbw"><table class="tb"><thead><tr><th>사이즈</th><th>권장 체중</th><th>견종 예시</th><th>해당 상품</th></tr></thead><tbody><tr><th scope="row">S</th><td class="num">3kg 이하</td><td>치와와 · 토이푸들</td><td>미니쿠션 · 와플 미니블랭킷 · 쿨클라우드 방석</td></tr><tr><th scope="row">M</th><td class="num">3 ~ 7kg</td><td>말티즈 · 포메라니안 · 시츄</td><td>카눌레쿠션 · 방석 · 와플블랭킷 · 도넛 쿠션</td></tr><tr><th scope="row">L</th><td class="num">7 ~ 15kg</td><td>코카스파니엘 · 비글</td><td>라운드 베드 · 리넨 러그 매트 · 코튼 홈매트</td></tr></tbody></table></div></div></div></div></section><section class="sec tinted"><div class="wrap"><div class="shead"><div><p class="eb">Categories</p><h2>카테고리</h2></div><div class="rt"><span>3 CATEGORIES / 12 ITEMS</span></div></div><div class="cats"><a class="cat" href="product-list.html#bed"><img src="https://placedog.net/400/400?id=1" alt="Bed &amp; Cushion" width="400" height="400" loading="lazy"><div><p class="nm">Bed &amp; Cushion</p><p class="de">오래 머무는 자리. 카눌레쿠션 · 미니쿠션 · 방석 · 라운드 베드</p></div><dl><dt>Items</dt><dd>7종</dd><dt>Price</dt><dd>32,000 ~ 76,000원</dd><dt>Size</dt><dd>S · M · L</dd><dt>Care</dt><dd>커버 분리 세탁</dd></dl><span class="go">VIEW &rarr;</span></a><a class="cat" href="product-list.html#mat"><img src="https://placedog.net/400/400?id=216" alt="Blanket &amp; Mat" width="400" height="400" loading="lazy"><div><p class="nm">Blanket &amp; Mat</p><p class="de">덮고 깔는 것. 와플블랭킷 · 리넨 러그 매트 · 코튼 홈매트</p></div><dl><dt>Items</dt><dd>5종</dd><dt>Price</dt><dd>29,000 ~ 68,000원</dd><dt>Size</dt><dd>S · M · L</dd><dt>Care</dt><dd>커버 분리 세탁</dd></dl><span class="go">VIEW &rarr;</span></a><a class="cat" href="product-list.html#cool"><img src="https://placedog.net/400/400?id=31" alt="Cooling" width="400" height="400" loading="lazy"><div><p class="nm">Cooling<span style="font:500 10px/1 var(--fm);letter-spacing:.12em;color:var(--sale);vertical-align:middle;margin-left:8px">SEASON</span></p><p class="de">여름 한정 냉감 라인. 아이스 코튼 방석 · 쿨클라우드 방석 · 쿨링 리넨 매트</p></div><dl><dt>Items</dt><dd>3종</dd><dt>Price</dt><dd>37,800 ~ 54,900원</dd><dt>Size</dt><dd>S · M · L</dd><dt>Care</dt><dd>커버 분리 세탁</dd></dl><span class="go">VIEW &rarr;</span></a></div></div></section><section class="sec"><div class="wrap"><div class="shead"><div><p class="eb">Contact</p><h2>문의</h2></div><div class="rt"><span>평일 10:00 – 17:00</span></div></div><div class="i4" style="grid-template-columns:repeat(3,1fr)"><div class="mod"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.4" y="4.6" width="17.2" height="12.8" rx="1.4"/><path d="m2.9 5.6 8.1 6 8.1-6"/></svg><h3>이메일 문의</h3><p>주문 · 교환 · 사이즈 문의는 이메일로 받습니다.<br>평일 10:00 – 17:00 사이에 답변드립니다.</p><a class="lk" href="mailto:hello@azalea-seoul.com">hello@azalea-seoul.com</a></div><div class="mod"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13.6 13.6 3l4.4 4.4L7.4 18z"/><path d="M7.6 8.4l1.7 1.7M10.4 5.6l1.7 1.7M4.8 11.2l1.7 1.7"/></svg><h3>사이즈가 고민되면</h3><p>아이 체중과 몸길이를 함께 보내 주세요.<br>맞는 사이즈를 골라 알려드립니다.</p><a class="lk" href="#size">사이즈 표 다시 보기 &rarr;</a></div><div class="mod"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7z"/><circle cx="6" cy="18.6" r="1.8"/><circle cx="16.2" cy="18.6" r="1.8"/></svg><h3>배송 · 교환</h3><p>50,000원 이상 무료배송.<br>수령 후 7일 이내 교환 · 환불 신청.</p><a class="lk" href="#notice-shipping">배송 안내 &rarr;</a></div></div></div></section></main><footer class="ft"><div class="wrap ft-top"><div class="ft-brand"><b>AZALEA</b><i>Dog bedding</i><p>반려견이 하루의 대부분을 보내는 자리를 만듭니다. 커버를 분리해 집에서 세탁할 수 있는 쿠션 · 방석 · 블랭킷 12종.</p></div><div><h4>Shop</h4><a href="product-list.html">전체 상품</a><a href="product-list.html#bed">Bed &amp; Cushion</a><a href="product-list.html#mat">Blanket &amp; Mat</a><a href="product-list.html#cool">Cooling</a></div><div><h4>Customer</h4><a href="#notice-shipping">배송 · 교환 · 환불 안내</a><a href="about.html#size">사이즈 가이드</a><a href="#notice">공지사항</a><a href="mailto:hello@azalea-seoul.com">문의하기</a></div><div><h4>Follow</h4><a href="#instagram">Instagram</a></div></div><div class="wrap"><div class="ft-legal"><div class="lg-nav"><a href="#terms">이용약관</a><a href="#privacy"><b>개인정보처리방침</b></a><a href="#notice">공지사항</a><a href="#guide">이용안내</a></div><div class="biz"><span>상호 Azalea</span><span>대표 000</span><span>사업자등록번호 000-00-00000</span><span>통신판매업신고 0000-서울00-0000</span></div><div class="biz"><span>주소 서울특별시</span><span>이메일 hello@azalea-seoul.com</span><span>개인정보보호책임자 000</span></div><div class="cp">© AZALEA. ALL RIGHTS RESERVED.</div></div></div></footer></body></html>
