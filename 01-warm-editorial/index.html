@@ -105,10 +105,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .bdg.rose{background:var(--rose)}
 .bdg.out{background:rgba(42,37,34,.72)}
 .pc.sold .ph img{opacity:.62}
-.pc .nm{margin:15px 0 0;font-size:14px;font-weight:400;letter-spacing:-.005em}
+.pc .nm{margin:15px 0 0;font-size:14px;line-height:1.75;font-weight:400;letter-spacing:-.005em;
+ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pc .pr{margin:6px 0 0;font-size:14px;font-weight:500;letter-spacing:.01em;font-variant-numeric:tabular-nums}
 .pc .pr.dim{color:var(--ink3);font-weight:400}
 .pc .ct{margin:3px 0 0;font-size:11.5px;color:var(--ink3);letter-spacing:.06em}
+
+/* ── pager (native) ─────────────────────── */
+.pager{display:flex;justify-content:center;align-items:center;gap:4px;padding:clamp(46px,6vw,74px) 0 clamp(30px,4vw,48px)}
+.pager b,.pager a{min-width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;
+ font-size:13px;font-weight:400;color:var(--ink3);font-variant-numeric:tabular-nums}
+.pager b{color:var(--ink);border-bottom:1px solid var(--ink)}
+.pager a:hover{color:var(--ink2)}
 
 /* ── reviews ────────────────────────────── */
 .rvs{display:flex;gap:20px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
@@ -277,6 +285,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
  .rowhead{flex-wrap:wrap;gap:6px 16px}
  .ham i{height:1.2px}
  .pg{grid-template-columns:repeat(2,1fr);column-gap:14px;row-gap:34px}
+ .pc .nm{min-height:49px}
  .i3{grid-template-columns:1fr}
  .i3>div{padding:30px 24px 28px}
  .pv{grid-template-columns:1fr;gap:30px}
@@ -314,4 +323,4 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    if(h&&n)h.addEventListener('click',function(){n.classList.toggle('open');});
  });
 })();
-</script></head><body><div class="hub"><div class="hubhead"><p class="eb">Azalea · 디자인 시안</p><h1 class="h-xl">안 1 — 웜 에디토리얼</h1><p class="tx" style="margin:22px auto 0;max-width:560px">따뜻한 종이 톤 바탕에 명조체 한 벌, 그리고 진달래빛 포인트 하나. 사진이 주인공이 되도록 나머지를 비워 둔 안입니다.</p><hr class="tick" style="margin:32px auto 0"></div><div class="hubgrid"><a class="hubcard" href="main.html"><div class="sh"><img src="https://placedog.net/900/1100?id=61" alt="메인" width="900" height="560"></div><div class="bd"><h3>메인</h3><p>히어로 · 브랜드 한 줄 · 카테고리 · 전체 상품 12 · 리뷰 · 안내</p></div></a><a class="hubcard" href="product-list.html"><div class="sh"><img src="https://placedog.net/600/750?id=170" alt="상품 목록" width="900" height="560"></div><div class="bd"><h3>상품 목록</h3><p>카테고리 전환 · 정렬 · 3열 그리드</p></div></a><a class="hubcard" href="product-detail.html"><div class="sh"><img src="https://placedog.net/1000/1000?id=64" alt="상품 상세" width="900" height="560"></div><div class="bd"><h3>상품 상세</h3><p>갤러리 · 구매 · 상세 정보 · 리뷰</p></div></a><a class="hubcard" href="about.html"><div class="sh"><img src="https://placedog.net/1600/900?id=47" alt="About" width="900" height="560"></div><div class="bd"><h3>About</h3><p>브랜드 이야기 · 소재 · 카테고리 · 문의</p></div></a></div><div class="swatches"><div class="sw"><i style="background:#FBF8F4"></i>PAPER</div><div class="sw"><i style="background:#F2EAE1"></i>SAND</div><div class="sw"><i style="background:#2A2522"></i>INK</div><div class="sw"><i style="background:#B5636F"></i>AZALEA</div><div class="sw"><i style="background:#6E645D"></i>GREY</div></div><p class="tx-s" style="text-align:center;padding-bottom:clamp(56px,8vw,96px)">제목 <b style="font-family:var(--serif);font-weight:400">나눔명조</b> · 본문 <b style="font-weight:500">본고딕(Noto Sans KR)</b><br>네 화면 모두 데스크톱 · 모바일에서 그대로 열립니다.</p></div></body></html>
+</script></head><body><div class="hub"><div class="hubhead"><p class="eb">Azalea · 디자인 시안</p><h1 class="h-xl">안 1 — 웜 에디토리얼</h1><p class="tx" style="margin:22px auto 0;max-width:560px">따뜻한 종이 톤 바탕에 명조체 한 벌, 그리고 진달래빛 포인트 하나. 사진이 주인공이 되도록 나머지를 비워 둔 안입니다.</p><hr class="tick" style="margin:32px auto 0"></div><div class="hubgrid"><a class="hubcard" href="main.html"><div class="sh"><img src="https://placedog.net/900/1100?id=61" alt="메인" width="900" height="560"></div><div class="bd"><h3>메인</h3><p>히어로 · 브랜드 한 줄 · 컬렉션 3 · 진열 3(쿠션 9 · 블랭킷 6 · 커버 3) · 리뷰 · 안내</p></div></a><a class="hubcard" href="product-list.html"><div class="sh"><img src="https://placedog.net/600/750?id=170" alt="상품 목록" width="900" height="560"></div><div class="bd"><h3>상품 목록</h3><p>카테고리 전환 · 정렬 · 3열 그리드 35개</p></div></a><a class="hubcard" href="product-detail.html"><div class="sh"><img src="https://placedog.net/1000/1000?id=69" alt="상품 상세" width="900" height="560"></div><div class="bd"><h3>상품 상세</h3><p>갤러리 · 구매 · 상세 정보 · 리뷰</p></div></a><a class="hubcard" href="about.html"><div class="sh"><img src="https://placedog.net/1600/900?id=47" alt="About" width="900" height="560"></div><div class="bd"><h3>About</h3><p>브랜드 이야기 · 소재 · 컬렉션 · 문의</p></div></a></div><div class="swatches"><div class="sw"><i style="background:#FBF8F4"></i>PAPER</div><div class="sw"><i style="background:#F2EAE1"></i>SAND</div><div class="sw"><i style="background:#2A2522"></i>INK</div><div class="sw"><i style="background:#B5636F"></i>AZALEA</div><div class="sw"><i style="background:#6E645D"></i>GREY</div></div><p class="tx-s" style="text-align:center;padding-bottom:clamp(56px,8vw,96px)">제목 <b style="font-family:var(--serif);font-weight:400">나눔명조</b> · 본문 <b style="font-weight:500">본고딕(Noto Sans KR)</b><br>네 화면 모두 데스크톱 · 모바일에서 그대로 열립니다.</p></div></body></html>
