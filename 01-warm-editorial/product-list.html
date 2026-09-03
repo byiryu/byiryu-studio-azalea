@@ -312,7 +312,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
      document.querySelectorAll('a[href]').forEach(function(a){
        var h=a.getAttribute('href');
        if(!h||/^(https?:|mailto:|tel:|#)/.test(h)||h.indexOf('annotate=1')>-1)return;
-       a.setAttribute('href',h+(h.indexOf('?')>-1?'&':'?')+'annotate=1');
+       var i=h.indexOf('#'), b=i<0?h:h.slice(0,i), fr=i<0?'':h.slice(i);
+       a.setAttribute('href',b+(b.indexOf('?')>-1?'&':'?')+'annotate=1'+fr);
      });
      var mb=document.getElementById('mwv');
      if(mb)mb.addEventListener('click',function(){window.open(location.href,'azmob','width=430,height=920');});
@@ -347,8 +348,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
  window.addEventListener('DOMContentLoaded',function(){
    document.querySelectorAll('.tabs button').forEach(function(b){
      b.addEventListener('click',function(){apply(b.dataset.cat);});});
+   applyHash();
+ });
+ function applyHash(){
    var hash=(location.hash||'').replace('#','');
    apply(TAB[hash]?hash:'all');
- });
+ }
+ window.addEventListener('hashchange',applyHash);
 })();
 </script></body></html>
